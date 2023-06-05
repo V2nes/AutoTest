@@ -1,0 +1,62 @@
+﻿@Test
+    public void testCaseTwo() throws InterruptedException{
+        //Вводим начальную точку
+        loginPage.inputStart(ConfProperties.getProperty("startingPoint"));
+        Thread.sleep(1000);
+        //Вводим конечную точку
+        loginPage.inputEnd(ConfProperties.getProperty("endPoint"));
+        Thread.sleep(1000);
+        //Выбираем тариф Свой
+        loginPage.clickYour();
+        Thread.sleep(1000);
+        //Выбираем вид транспорта каршеринг
+        loginPage.clickDrive();
+        Thread.sleep(1000);
+        //Нажимаем кнопку Забронировать
+        loginPage.clickButtonBook();
+        Thread.sleep(1000);
+        //Нажимаем на поле добавления карты
+        loginPage.clickButtonCard();
+        Thread.sleep(1000);
+        //нажимаем на кнопку добавить карту
+        loginPage.clickSecondButtonCard();
+        Thread.sleep(1000);
+        //Вводим данные в поле Номер Карты
+        loginPage.inputNumberCard(ConfProperties.getProperty("numberCard"));
+        Thread.sleep(1000);
+        //Вводим код безопасности
+        loginPage.inputSecurityCode(ConfProperties.getProperty("securityCode"));
+        Thread.sleep(1000);
+        //нажимаем на заголовок Добавить карты
+        loginPage.clickEmptyOverlay();
+        Thread.sleep(1000);
+        //нажимаем на кнопку Привязать
+        loginPage.clickSnapButton();
+        Thread.sleep(1000);
+        //нажимаем крести в разделе карты
+        loginPage.clickTheCross();
+        Thread.sleep(1000);
+        //Нажимаем на поле добавления ВУ
+        loginPage.clickDrivingLicense();
+        Thread.sleep(1000);
+        //Заполняем поле Имя
+        loginPage.inputNameDrivers(ConfProperties.getProperty("nameAbonent"));
+        Thread.sleep(1000);
+        //Заполняем поле Фамилия
+        loginPage.inputLastNameDrivers(ConfProperties.getProperty("lastNameAbonent"));
+        Thread.sleep(1000);
+        //Заполняем поле Дата рождения
+        loginPage.inputDateOfBirth(ConfProperties.getProperty("dateOfBirth"));
+        Thread.sleep(1000);
+        //Заполняем поле Номер
+        loginPage.inputNumberDrivingLicense(ConfProperties.getProperty("numberDrivingLicense"));
+        Thread.sleep(1000);
+        //Клик на пустое место
+        loginPage.clickEmptySpace();
+        Thread.sleep(1000);
+        //Нажимаем кнопку Добавить
+        loginPage.clickAdd();
+        Thread.sleep(1000);
+        //Нажимаем кнопку Принято
+        loginPage.clickAcceptedButton();
+        //Удаляем данные поля откуда
